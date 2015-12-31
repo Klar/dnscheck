@@ -14,8 +14,8 @@ import socket
 for domain in domains:
 	try:
 		#rstrip removes the blank lines at the end!!!
-		bla = socket.gethostbyname("www." + domain.rstrip())
-		print(bla)
+		ip_domain = socket.gethostbyname("www." + domain.rstrip())
+		print ip_domain
 	except socket.gaierror:
 		print(socket.gaierror)
 		# not getting back an ip, write to file
